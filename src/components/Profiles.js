@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {connect} from "react-redux";
 
 function Profiles(props) {
@@ -6,7 +7,7 @@ function Profiles(props) {
     return (
       <div key={i}>
         {user.firstName} - {user.lastName}
-        <a href="#"> View </a>
+        <Link to={"/profile/" + user.id}> View </Link>
       </div>);
   });
   return (   
